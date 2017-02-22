@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人信息</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<script src="js/jquery-1.11.3.js"></script>
+   	<script src="js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 	<style>
+ 		div.condition{
+ 			  background-color: #fff;
+		    border: 1px solid #eee;
+		    border-radius: 5px;
+		    margin-bottom: 5px;
+		    padding: 13px 13px 0;
+		    text-align: center;}
+ 	</style>
+ 	<script>
+	 		function getDataMemu(user_id){
+			var url= contextPath+"getDataMemu.html?user_id="+user_id;
+			layer.open({
+				offset:[($(window).height()-500)/2+'px',''],
+			    type:2,
+			    title: '查看菜单权限',
+				shadeClose:false,
+			    shade:0.8,
+			    area: ['500px','500px'],
+			    content: url 
+				});
+		}
+ 	</script>
+  </head>
+  <body style="background-color: #ddd;">
+    <div class="container">
+					<div id="personInfoPage" class="row">
+								<div class="col-md-3">
+									<h4 class="text-center"><b>基本信息</b></h4>
+									<div class="condition">
+										<img class="img-circle h3" src="img/touxiang.jpg"  style="width: 100px;height: 100px;"/>
+										<div class="table-responsive">
+												<table class="table text-left">
+													<caption></caption>
+													<thead>
+														<tr>
+															<td class="text-nowrap">登录账户</td>
+															<td>XXXXXX</td>
+														</tr>
+													</thead>
+													<tr>
+														<td class="text-nowrap">真实姓名</td>
+														<td>AAAAAAAAAA</td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">所属公司</td>
+														<td> </td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">部门</td>
+														<td>信息运营中心软件项目管理专业组</td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">职位</td>
+														<td>信息技术专业经理</td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">联系电话</td>
+														<td>12345678</td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">E-mail</td>
+														<td>1234567890@qq.com</td>
+													</tr>
+													<tr>
+														<td class="text-nowrap">职员ID</td>
+														<td><12345678/td>
+													</tr>
+											</table>
+										</div>	
+									</div>
+								</div>
+								<div class="col-md-3">
+										<h4 class="text-center"><b>功能权限</b></h4>
+										<div class="condition">
+												<a href="#" onclick="getDataMemu(\'' + row.user_id+ '\')">查看菜单权限</a>
+										</div>
+								</div>
+								<div class="col-md-3">
+									<h4 class="text-center"><b>数据权限</b></h4>
+									<div class="condition">
+												<a href="# " onclick="getDataMemu(\'' + row.user_id+ '\')">查看菜单权限</a>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<h4 class="text-center"><b>管理驾驶舱皮肤</b></h4>
+									<div class="condition">
+											<div class="row">
+													<div class="col-xs-12  text-center">
+															<div class="text-center">
+																	<img class="img-thumbnail img-responsive" src="img/1.jpg">
+															</div>
+													</div>
+													<div class="col-xs-12">
+															<div class="text-center">
+																	<img class="img-thumbnail img-responsive" src="img/1.jpg">
+															</div>
+													</div>
+													<div class="col-xs-12">
+															<div class="text-center">
+																	<img class="img-thumbnail img-responsive" src="img/1.jpg">
+															</div>
+													</div>
+											</div>
+									</div>
+								</div>
+					</div>
+    </div>
+   	<script src="js/bootlint.js"></script>
+    <script>
+		    	(function() { var s = document.createElement("script");
+					s.onload = function() { bootlint.showLintReportForCurrentDocument([]); };
+					s.src = "js/bootlint.js";
+					document.body.appendChild(s) 
+		    	})();
+					/*四个div同等高度*/
+					var h=$("div.container #personInfoPage div.col-md-3:first-child").height();
+					$("div.container #personInfoPage div.col-md-3>.condition").height(h);
+			
+    </script>
+  </body>
+</html>

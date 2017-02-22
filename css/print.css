@@ -1,0 +1,14 @@
+body{
+	font-family: arial;
+	background-color: #FFFFFF;
+}
+.box{
+	background-color: #ccf;
+	color:#0A0;
+	border: 1px solid #00a;
+	padding:3px;
+}
+.box h1{
+	font-size: 1em;
+	font-weight: bold;
+}

@@ -1,0 +1,51 @@
+*{box-sizing: border-box;}
+body{
+	font-family: arial;
+	background-color: #FFFFFF;
+}
+div{border:1px solid #000;}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {
+    margin:0px;
+    padding:0px;
+    border:none;
+    list-style:none;
+}
+/*header样式*/
+	#header{
+	width: 100%;
+	height: 30px;
+	background-color: #337AB7;
+	}
+/*main样式*/
+	#main .left{background-color: purple;}
+	#main .center{background-color: orange;}
+	#main .right{background-color: saddlebrown;word-break:break-all;}
+	.imgBox:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.imgBox>img{float: left;}
+/*pc*/
+@media screen and (min-width:992px) {
+	#main .left , #main .center , #main .right{float:left;}
+	#main .left{width: 20%;height: 100px;} 
+	#main .center{width: 60%;}
+	#main .right{width: 20%;height: 150px;word-break:break-all;}
+	.imgBox img{width:25%;}
+}
+/*pad*/
+@media screen and (max-width:991px) and (min-width:728px) {
+	#main .right{display:none;}
+	#main .left , #main .center{float:left;}
+	#main .left{width: 20%;height:100px;} 
+	#main .center{width:80%;}
+	.imgBox img{width:50%;}
+}
+/*phone*/
+@media screen and (max-width:727px){
+	#main .right{display: none;}
+	#main .left{width:100%;height: 100px;} 
+	#main .center{width:100%;}
+	.imgBox img{width:100%;}
+}
